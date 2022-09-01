@@ -1,0 +1,216 @@
+/*------------------------------------------------------------------------------WELCOME----------------------------------------------------------------------------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:  #99b8c8;
+    background-image: url("images/background.png");
+    background-size: cover;
+    font-family: "Book Antiqua";
+}
+.body1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9)), url("images/welcome.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#welcome{
+    font-size: 90px;
+    font-weight: 500;
+    color: white;
+    background: rgba(112,128,144, 0.5); 
+    padding: 15px 50px;
+}
+#how_play{
+    color: white;
+    font-size: 37px;
+    margin-top: 70px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+.play{
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    background: rgba(234, 223, 217, 0.7);
+    padding: 10px 15px;
+    margin: 0 30px;
+    display: block;
+}
+.play:hover{
+    background: rgba(220, 202, 192, 0.7);
+}
+#friend{
+    margin-bottom: 15px;
+    text-align: center;
+}
+#comp{
+    margin-bottom: 90px;
+}
+
+/*-------------------------------------------------------------------------------FRIEND----------------------------------------------------------------------------*/
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    color: #ec7589;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#back{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+#mode{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    margin: 25px;
+    cursor: pointer;
+}
+.fa-solid{
+    font-size: 30px;
+    color: #3f6376;
+    margin: 25px;
+}
+.fa-solid:hover{
+    color: #efe4df;
+}
+.players{
+    border: 2px solid #4d788f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 24px;
+    margin-top: 50px;
+    padding: 2px;
+}
+.players div{
+    padding: 15px;
+}
+.players div.active{
+    background-color: #4d788f;
+    color: white;
+    border-radius: 15px;
+}
+#board{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    margin-top: 160px;
+}
+.cell{
+    height: 120px;
+    width: 120px;
+    border: 3px solid #4d788f;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+    border-bottom: none;
+}
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7){
+    border-left: none;
+}
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9){
+    border-right: none;
+}
+.result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#win{
+    color: white;
+    font-size: 90px;
+    font-weight: 500;
+    background: rgba(116, 158, 180, 0.5);
+    padding: 15px 50px;
+}
+.result button{
+    font-size: 50px;
+    background: #4d788f;
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+    border: none;
+    margin-top: 30px;
+}
+.result button:hover{
+    background-color: #385869;
+    transition-duration: 0.3s;
+}
+.inactive{
+    display: none;
+}
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/*------------------------------------------------------------------------------COMPUTER---------------------------------------------------------------------------*/
+
+.boardC{
+    pointer-events: none;
+}
+.level {
+    margin: 0 15px;
+    color: #31465c;
+    cursor: pointer;
+}
+.difficulty{
+    margin-left: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:10px;
+}
+#levels{
+    border: 2px solid #466d82;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 25px;
+    box-shadow: 5px 5px 5px 5px rgba(31, 31, 31, .2);
+
+}
+.not-selected {
+    opacity: 0.7;
+}
+.not-selected:hover {
+    opacity:1;
+    color: #385869;
+    border-bottom: 4px solid white;
+    transition: 0.3s;
+}
+#choice{
+    font-size: 40px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+}
